@@ -33,7 +33,7 @@
             
             function generate() {
                 const cloneDir = repoURL().substring(repoURL().lastIndexOf("/") + 1).split(".git")[0];
-
+                
                 return `@echo off
 set PATH=%PATH%;${gitExeDir()}
 
@@ -58,7 +58,7 @@ cd ..
 `)}
 
 pause
-                `;
+`;
             }
 
             return html`
