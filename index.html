@@ -43,7 +43,7 @@ ${Array(Number(lastZipFileName().substr(lastZipFileName().lastIndexOf(".") + 1))
 .fill(undefined)
 .map((_, index) => `move /Y "${lastZipFileName().substr(0, lastZipFileName().lastIndexOf("."))}.${sprintf('%1$03d', index + 1)}" ${cloneDir}`)
 .reduce((prev, current, currentIndex) => {
-	if (currentIndex % 20 == 0) {
+	if (currentIndex % 10 == 0) {
     	return [...prev, [current]];
     } else {
       	return prev.map((ele, i) => i == prev.length - 1 ? [...ele, current] : ele)
